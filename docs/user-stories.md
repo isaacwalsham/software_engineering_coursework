@@ -16,5 +16,16 @@ Use the format:
 (You can add IDs like US-01, US-02 if you want.)
 
 ## Notes
-
+1. US-01 Steve - Data imports
+Given: Steve is on the import page
+When: he uploads a valid UEA data file
+Then: all module deadlines appear in the system without manual entry.
+2. US-02 Michelle - Logging sessions
+Given: Michelle has an active assessment task
+When: she enters a study session duration and saves it
+Then: her progress percentage for that specific module increases
+3. US-03 Ben - Gantt chart
+ Given: Ben is viewing the Gantt chart,
+ When: a task is past its deadline
+ Then: that task is highlighted in a different color to indicate it is overdue
 (Any assumptions, constraints, or questions.)
