@@ -3,7 +3,7 @@
 ## User Story 01 (Happy Path)
 
 ```mermaid
-sequenceDiagram %% User Story 1 (Happy Path)
+    sequenceDiagram %% User Story 01 (Happy Path)
     participant UEA as UEA Academic Data Source
     participant User as Student (User Story 1)
     participant Login as Planner Login
@@ -21,7 +21,11 @@ sequenceDiagram %% User Story 1 (Happy Path)
     Planner-->>User: Display imported modules and deadlines
 ```
 
-## Userpant User as Student (User Story 1)
+## User Story 01 (Unhappy Path 1, Login Error)
+
+```mermaid
+    sequenceDiagram %% User Story 01 (Unhappy Path 1, Login Error)
+    participant User as Student
     participant Login as Planner Login
     participant Auth as Authenticor 
     participant Planner as Study Planner System
@@ -40,7 +44,7 @@ sequenceDiagram %% User Story 1 (Happy Path)
 ## User Story 01 (Unhappy Path 2, Import Error)
 
 ```mermaid
-sequenceDiagram %% User Story 1 (Unhappy Path 2)
+    sequenceDiagram %% User Story 01 (Unhappy Path 2, Import Error)
     participant UEA as UEA Academic Data Source
     participant User as Student (User Story 1)
     participant Login as Planner Login
@@ -58,9 +62,10 @@ sequenceDiagram %% User Story 1 (Unhappy Path 2)
     Planner-->>User: Show Error code 
 ```
 
-## User Story 02 (Happy Path) Story 01 (Unhappy Path 1, Incorrect Login Details)
+## User Story (n) (Happy Path)
 
 ```mermaid
-sequenceDiagram %% User Story 1 (Unhappy Path 1)
+    sequenceDiagram %% User Story 1 (Unhappy Path 1)
     participant UEA as UEA Academic Data Source
-    partici
+
+```
