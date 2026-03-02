@@ -4,9 +4,8 @@ In accordance with the module requirement that the project be undertaken in a fi
 
 The allocation below reflects **role ownership rather than isolated responsibility**. All team members contribute to design discussions, peer review, and integration testing.
 
----
 
-## 👤 Philip Lush (Team Leader) – Sprint Coordination and Core Integration
+## Philip Lush (Team Leader) – Sprint Coordination and Core Integration
 
 - Sprint planning and coordination  
 - Oversight of architectural consistency  
@@ -16,9 +15,8 @@ The allocation below reflects **role ownership rather than isolated responsibili
 
 As Team Leader, Philip ensures that independently developed components integrate coherently and align with the sprint goal.
 
----
 
-## 👤 Tate Jeffries – Task Management Functionality
+## Tate Jeffries – Task Management Functionality
 
 - Implementation of **Task Creation linked to Assessments (US4)**  
 - Implementation of **Task Requirement Definition (US7)**  
@@ -27,9 +25,8 @@ As Team Leader, Philip ensures that independently developed components integrate
 
 This role directly supports the core user goal of breaking coursework into manageable components.
 
----
 
-## 👤 Isaac Walsham – Study Activity Logging
+## Isaac Walsham – Study Activity Logging
 
 - Implementation of **Activity Logging (US8)**  
 - Support for attaching notes to activities (US10)  
@@ -38,9 +35,8 @@ This role directly supports the core user goal of breaking coursework into manag
 
 This component enables measurable study progress and supports dynamic progress tracking.
 
----
 
-## 👤 Ashwin Anand – Progress Calculation and Basic Visualisation
+## Ashwin Anand – Progress Calculation and Basic Visualisation
 
 - Implementation of **Progress Calculation Logic (supports US9 and US12)**  
 - Development of basic progress indicators (e.g., percentage completion)  
@@ -48,19 +44,15 @@ This component enables measurable study progress and supports dynamic progress t
 
 This role ensures that Sprint 1 produces visible, meaningful feedback for users.
 
----
 
-## 👤 Daniel Roath – Persistence, Testing, and Quality Assurance
+## Daniel Roath – Persistence, Testing, and Quality Assurance
 
 - Implementation of storage strategy (file-based or database)  
 - Ensuring correct data persistence across sessions  
 - Development of unit and integration tests for core flows  
-- Verification of the full workflow:  
-  `import → task creation → activity logging → progress update`
 
 This role strengthens system reliability and ensures the sprint produces a stable, demonstrable working increment.
 
----
 
 # Collaboration and Shared Responsibility
 
