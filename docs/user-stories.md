@@ -1,31 +1,71 @@
 # User Stories
 
-Use the format:
+All user stories follow the format:
 
-> As a \<user>, I want \<goal> so that \<reason>.
+> As a <user>, I want <goal>, so that <reason>.
+
 
 ## Story List
 
-1. US-01:As Steve, I want to import my modules and deadline from the provided UEA data file, so that I can see all my coursework dealines in one place and start planning my semester.
-2. US-02:As Michelle, I want to log my study sessions against specific tasks, so I can track my actual progress towards each assessment deadline.
-3. US-03:As Ben, I want to view my semester workload on a gantt chart and dashboard so that I can identify busy periods,task dependancies and progress across all my modules.
-4. US-04:As Steve, I want to the system to break my coursework into smaller tasks, so I can make a realistic semester plan instead of cramming.
-5. US-05:As Michelle, I want to see a dashboard showing my progress percentage per module, so I can prioritise the assignments im falling behind schedule in.
+### US-01 – Module and Deadline Import  
+> As Steve,  
+> I want to import my modules and deadlines from the provided UEA data file,  
+> so that I can see all my coursework deadlines in one place and begin planning my semester effectively.
 
 
-(You can add IDs like US-01, US-02 if you want.)
+### US-02 – Study Session Logging  
+> As Michelle,  
+> I want to log my study sessions against specific tasks,  
+> so that I can track my actual progress towards each assessment deadline.
 
-## Notes
-1. US-01 Steve - Data imports
-Given: Steve is on the import page
-When: he uploads a valid UEA data file
-Then: all module deadlines appear in the system without manual entry.
-2. US-02 Michelle - Logging sessions
-Given: Michelle has an active assessment task
-When: she enters a study session duration and saves it
-Then: her progress percentage for that specific module increases
-3. US-03 Ben - Gantt chart
- Given: Ben is viewing the Gantt chart,
- When: a task is past its deadline
- Then: that task is highlighted in a different color to indicate it is overdue
-(Any assumptions, constraints, or questions.)
+
+### US-03 – Workload Visualisation  
+> As Ben,  
+> I want to view my semester workload on a Gantt chart and dashboard,  
+> so that I can identify busy periods, task dependencies, and track progress across all my modules.
+
+
+### US-04 – Task Breakdown  
+> As Steve,  
+> I want the system to help me break coursework into smaller tasks,  
+> so that I can create a realistic semester plan instead of cramming close to deadlines.
+
+
+### US-05 – Module-Level Progress Overview  
+> As Michelle,  
+> I want to see a dashboard showing my progress percentage per module,  
+> so that I can prioritise the assignments where I am falling behind schedule.
+
+
+# Acceptance Notes (Initial Behaviour Scenarios)
+
+The following scenarios outline example validation conditions for selected stories.
+
+
+## US-01 – Data Import
+
+**Given** Steve is on the module import page  
+**When** he uploads a valid UEA data file  
+**Then** all module names, coursework, and deadlines appear in the system without requiring manual entry  
+
+
+## US-02 – Study Session Logging
+
+**Given** Michelle has an active assessment task  
+**When** she enters a study session duration and saves it  
+**Then** the progress percentage for that specific task (and relevant module) updates accordingly  
+
+
+## US-03 – Gantt Chart Visualisation
+
+**Given** Ben is viewing the Gantt chart  
+**When** a task passes its deadline without being completed  
+**Then** that task is highlighted in a different colour to indicate it is overdue  
+
+
+# Assumptions and Constraints
+
+- The UEA data file follows an agreed, valid structure.
+- Progress percentages are calculated based on measurable task requirements (e.g., hours required vs. hours completed).
+- Deadline comparisons use system time.
+- Visual indicators (e.g., colour changes) must be clearly distinguishable and accessible.
