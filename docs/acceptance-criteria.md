@@ -39,29 +39,13 @@ Main Aim: Ben wishes to display his work throughout the semester on a gannt char
 
 Happy Path:
 
-  Given the user has uploaded a data file contianing UEA's modules and tasks associated
-  When the student selects Gantt chart view option
-  Then 
+  Given the user has uploaded a data file contianing UEA's modules and tasks associated,
+  When the student selects Gantt chart view option,
+  Then tasks are displayed on a timeline in tandem with their deadlines
 
 Unhappy Path:
 
-  Given ...
-  When ...
-  Then ...
-  
-## Story: [US-04]
-
-Main Aim: 
-
-Happy Path:
-
-  Given ...
-  When ...
-  Then ...
-
-Unhappy Path:
-
-  Given ...
-  When ...
-  Then ...
+  Given no modules have been imported
+  When the user tries loading the Gannt chart 
+  Then the user sees a blank screen with a message promiting them to import their modules and deadlines
   
