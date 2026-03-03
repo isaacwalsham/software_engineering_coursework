@@ -76,7 +76,7 @@ Sequence diagrams should respect architecture boundaries, for example UI → Bac
 
 In our diagrams, the “Study Planner System” performs several internal actions, but persistence is hidden inside one lifeline. That is acceptable at a high level, but we should make sure our final version still reflects the boundaries from our C4 model.
 
-New assumptions discovered
+New assumptions discovered:
 
 During iteration, we realised that several assumptions had been implicit and now need to be documented:
 
