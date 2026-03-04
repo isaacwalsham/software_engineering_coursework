@@ -143,3 +143,17 @@ Change 5: Clarify import failure behaviour
 - Our preferred option is to avoid saving partial deadline data unless the import succeeds cleanly.
 
 - Reason: this reduces data inconsistency and better supports the requirement not to lose dates.
+
+|   Backlog item        |           |           |<img width="483" height="644" alt="Screenshot 2026-03-04 at 13 06 07" src="https://github.com/user-attachments/assets/b07b7e92-a5fe-45da-81f3-b99cba6c64cf" />
+
+|---------------|-----------|-----------|
+|               |           |           |
+|               |           |           |
+|               |           |           |
+|               |           |           |
+|               |           |           |
+|               |           |           |
+|               |           |           |
+|               |           |           |
+|               |           |           |
+|               |           |           |
