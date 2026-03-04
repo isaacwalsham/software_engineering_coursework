@@ -147,3 +147,16 @@ Change 5: Clarify import failure behaviour
 
   <img width="483" height="644" alt="Screenshot 2026-03-04 at 13 06 07" src="https://github.com/user-attachments/assets/b07b7e92-a5fe-45da-81f3-b99cba6c64cf" />
 
+***How we will manage the sprint backlog***:
+
+We will use GitHub Projects to manage the sprint backlog because it keeps tasks close to the codebase and matches the lecture advice that sprint documentation should be archived close to the code, ideally in GitHub.
+
+Our board will initially use simple columns:
+
+- Backlog
+
+- To Do
+
+- In Progress
+
+- Done
