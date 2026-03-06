@@ -2,9 +2,9 @@
 
 ## System Definition
 
-The Study Planner is a web-based academic planning application that helps students import assessment deadlines, decompose coursework into manageable tasks, log and track study sessions, visualise progress and task dependencies, and receive reminders for upcoming and overdue work.
+The Study Planner is a web-based academic planning application that helps students import assessment deadlines, break down coursework into manageable tasks, log and track study sessions, visualise progress and task dependencies, and receive reminders for upcoming and overdue work.
 
-**System boundary:** Everything the application stores, calculates, displays, and notifies about study planning and progress is inside the boundary. Anything related to teaching, grading, official timetabling, or institutional data ownership and accuracy is outside the boundary.
+**System boundary:** Everything the application stores, calculates, displays, and notifies about study planning and progress is inside the boundary. Anything related to teaching, grading or official timetabling is outside the boundary.
 
 ---
 
@@ -13,14 +13,14 @@ The Study Planner is a web-based academic planning application that helps studen
 The following components, features, and functionalities are part of the system being developed.
 
 ### School Data Import and Organisation
-- Import module and assessment information and deadlines from a structured data file provided by the UEA Hub
-- Automatically organise imported data into semester and module structures, reflecting the academic semester timeline
+- Import module and assessment information and deadlines from a structured data file provided by UEA
+- Automatically organise imported data into semester and module structures, mirroring the academic semester timeline
 - Validate file format and structure before persisting any data
 
 ### Coursework Breakdown into Tasks and Milestones
-- Allow students to decompose coursework assessments into smaller, more manageable study tasks
+- Allowing students to break down coursework assessments into smaller chunks, like more manageable study tasks
 - Support task dependencies (e.g. a "Write Draft" task cannot begin until "Research" is complete)
-- Allow students to define intermediate milestones with their own deadlines, linked to one or more tasks
+- Allow students to define their own intermediate milestones with their own deadlines, linked to one or more tasks
 
 ### Study Session Logging Tied to Tasks
 - Allow students to log study activities and link them to one or more specific tasks
@@ -30,18 +30,18 @@ The following components, features, and functionalities are part of the system b
 ### Progress and Dependency Visualisation
 - Provide a Gantt chart timeline showing task bars across the semester, with start dates and deadlines
 - Display progress fills within task bars indicating percentage completion
-- Render dependency arrows between tasks to show which tasks are locked until prerequisites are complete
-- Display milestone markers as diamond shapes at their respective deadline positions
+- Render dependency arrows between tasks to show which tasks are locked until the previous tasks are complete
+- Display milestone markers at their respective deadline positions
 
 ### Module-Level Progress Dashboard
 - Aggregate task progress across all modules and assessments
 - Classify each deadline as completed, upcoming, or missed based on progress and current date
-- Display a progress bar for each deadline so students can identify where attention is needed
+- Display a progress bar for each deadline so students can prioritise and identify visually where their attention is needed
 
 ### Deadline and Overdue Reminders
 - Compare task and assessment deadlines against the current system date
 - Highlight tasks approaching their deadline in amber and overdue tasks in red
-- Surface these alerts on the dashboard so students have immediate visibility of at-risk work
+- Surface these alerts on the dashboard so students have immediate visibility of work due imminently
 
 ---
 
@@ -51,7 +51,7 @@ The following are explicitly outside the system's responsibility.
 
 | Area | Reason |
 |---|---|
-| Official institutional data correctness | The system is not responsible for guaranteeing that school-provided data is accurate or complete. Discrepancies with school records must be resolved externally. |
+| Official institutional data correctness | The system is not responsible for guaranteeing that school-provided data is accurate or complete. Issues with school records must be resolved externally. |
 | Teaching and learning content delivery | No tutoring, revision notes, lecture content, solutions, or marking feedback. |
 | Grading, submissions, and academic administration | Not responsible for submitting coursework, interfacing with plagiarism checks, marking, or grade calculation as an official record. Not an official student record system. |
 | University timetable generation | Not responsible for generating the university timetable, managing classes, or enforcing attendance. |
@@ -67,7 +67,7 @@ The following are explicitly outside the system's responsibility.
 - **Student** — creates tasks, logs study sessions, views progress, and receives reminders
 
 ### Optional Supporting Actors
-- **Tutor / Mentor / Study Buddy** — may view shared progress in future iterations (out of scope for v1)
+- **Tutor / Mentor / Study Buddy** — may view shared progress in future iterations 
 
 ### External Systems Interacting with the Boundary
 
