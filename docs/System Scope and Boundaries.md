@@ -6,7 +6,7 @@ The Study Planner is a web-based academic planning application that helps studen
 
 **System Scope and boundary:** Everything the application stores, calculates, displays, and notifies about study planning and progress is inside the boundary. Anything related to teaching, grading or official timetabling is outside the boundary.
 
----
+
 
 ## In Scope
 
@@ -43,7 +43,7 @@ The following components, features, and functionalities are part of the system b
 - Highlight tasks approaching their deadline in amber and overdue tasks in red
 - Surface these alerts on the dashboard so students have immediate visibility of work due imminently
 
----
+
 
 ## Out of Scope
 
@@ -59,7 +59,7 @@ The following are explicitly outside the system's responsibility.
 | Device and OS notification delivery | The system can request notifications, but OS and platform delivery failures are outside the system's responsibility. |
 | Third-party service availability | If an external calendar service or LMS changes their API or becomes unavailable, that is outside the system boundary. |
 
----
+
 
 ## Actors and External Systems
 
