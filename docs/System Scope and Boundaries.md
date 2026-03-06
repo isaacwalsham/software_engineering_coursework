@@ -2,46 +2,46 @@
 
 ## System Definition
 
-The Study Planner is a web-based academic planning application that helps students import assessment deadlines, break down coursework into manageable tasks, log and track study sessions, visualise progress and task dependencies, and receive reminders for upcoming and overdue work.
+Our system is a Study Planner, which is a web-based academic planning application that helps students import assessment deadlines, break down coursework into manageable tasks, log and track study sessions, see progress and task dependencies, and receive reminders for upcoming and overdue work.
 
-**System Scope and boundary:** Everything the application stores, calculates, displays, and notifies about study planning and progress is inside the boundary. Anything related to teaching, grading or official timetabling is outside the boundary.
+**System Scope and boundary:** Everything the application stores, calculates, displays, and notifies about study planning and progress is inside the boundary. Anything related to teaching, grading or timetabling is outside the boundary.
 
 
 
 ## In Scope
 
-The following components, features, and functionalities are part of the system being developed.
+The following components, features, and functionalities are part of our system being developed.
 
 ### School Data Import and Organisation
-- Import module and assessment information and deadlines from a structured data file provided by UEA
-- Automatically organise imported data into semester and module structures, mirroring the academic semester timeline
-- Validate file format and structure before persisting any data
+- Import module and assessment information and deadlines from a data file provided by UEA.
+- Automatically organise imported data into semester and module structures, mirroring the academic semester timeline.
+- Validate file format and structure before persisting any data.
 
 ### Coursework Breakdown into Tasks and Milestones
-- Allowing students to break down coursework assessments into smaller chunks, like more manageable study tasks
-- Support task dependencies (e.g. a "Write Draft" task cannot begin until "Research" is complete)
-- Allow students to define their own intermediate milestones with their own deadlines, linked to one or more tasks
+- Allowing students to break down coursework assessments into smaller chunks, like more feasible study tasks.
+- Support task dependencies (e.g. a "Write Draft" task cannot begin until "Research" is complete).
+- Allow students to define their own milestones with their own deadlines, linked to one or more tasks.
 
 ### Study Session Logging Tied to Tasks
-- Allow students to log study activities and link them to one or more specific tasks
-- Capture activity type, duration, quantity completed, date, and optional notes
-- Use logged activity data to calculate and update progress towards task completion
+- Allow students to log study activities and link them to one or more specific tasks.
+- Capture what the students are studying, the duration, quantity completed, date, and optional notes.
+- Use logged activity data to calculate and update progress towards task completion.
 
 ### Progress and Dependency Visualisation
-- Provide a Gantt chart timeline showing task bars across the semester, with start dates and deadlines
-- Display progress fills within task bars indicating percentage completion
-- Render dependency arrows between tasks to show which tasks are locked until the previous tasks are complete
-- Display milestone markers at their respective deadline positions
+- Provide a Gantt chart timeline showing task bars across the semester, with start dates and deadlines.
+- Display progress fills within task bars indicating percentage completion.
+- Use dependency arrows between tasks to show which tasks are locked until the previous tasks are complete.
+- Display milestone markers at their respective deadline positions.
 
 ### Module-Level Progress Dashboard
-- Aggregate task progress across all modules and assessments
-- Classify each deadline as completed, upcoming, or missed based on progress and current date
-- Display a progress bar for each deadline so students can prioritise and identify visually where their attention is needed
+- Aggregate task progress across all modules and assessments.
+- Classify each deadline as completed, upcoming, or missed based on progress and current date.
+- Display a progress bar for each deadline so students can prioritise and identify visually where their attention is needed.
 
 ### Deadline and Overdue Reminders
-- Compare task and assessment deadlines against the current system date
-- Highlight tasks approaching their deadline in amber and overdue tasks in red
-- Surface these alerts on the dashboard so students have immediate visibility of work due imminently
+- Compare task and assessment deadlines against the current system date.
+- Highlight tasks especially ones that are approaching their deadline in amber and overdue tasks in red.
+- Surface these alerts on the dashboard so students have immediate visibility of work due imminently.
 
 
 
