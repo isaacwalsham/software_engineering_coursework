@@ -4,7 +4,7 @@
 
 The Study Planner is a web-based academic planning application that helps students import assessment deadlines, break down coursework into manageable tasks, log and track study sessions, visualise progress and task dependencies, and receive reminders for upcoming and overdue work.
 
-**System boundary:** Everything the application stores, calculates, displays, and notifies about study planning and progress is inside the boundary. Anything related to teaching, grading or official timetabling is outside the boundary.
+**System Scope and boundary:** Everything the application stores, calculates, displays, and notifies about study planning and progress is inside the boundary. Anything related to teaching, grading or official timetabling is outside the boundary.
 
 ---
 
