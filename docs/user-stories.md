@@ -1,4 +1,4 @@
-# 2.3 User Stories and Acceptance Criteria
+# 2.3 User Stories
 
 All user stories follow the Connextra format:
 > As a [persona], I want [feature], so that [benefit].
