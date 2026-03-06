@@ -47,27 +47,27 @@ The following components, features, and functionalities are part of our system b
 
 ## Out of Scope
 
-The following are explicitly outside the system's responsibility.
+The following are explicitly outside the system's responsibility:
 
 | Area | Reason |
 |---|---|
-|  Data correctness | The system is not responsible for guaranteeing that school-provided data is accurate or complete. Issues with school records must be resolved externally. |
-| Teaching and learning content delivery | No tutoring, revision notes, lecture content, solutions, or marking feedback. |
-| Grading, submissions, and academic administration | Not responsible for submitting coursework, interfacing with plagiarism checks, marking, or grade calculation as an official record. Not an official student record system. |
-| University timetable generation | Not responsible for generating the university timetable, managing classes, or enforcing attendance. |
-| Mental health and wellbeing intervention | Not responsible for clinical wellbeing monitoring, diagnosis, or crisis support. |
-| Device and OS notification delivery | The system can request notifications, but OS and platform delivery failures are outside the system's responsibility. |
-| Third-party service availability | If an external calendar service or LMS changes their API or becomes unavailable, that is outside the system boundary. |
+|  Data correctness | The system is not responsible for guaranteeing that school-provided data is accurate or complete Issues with school records must be resolved externally |
+| Teaching and learning content delivery | No tutoring, revision notes, lecture content, solutions, or marking feedback |
+| Grading, submissions, and academic administration | Not responsible for submitting coursework, interfacing with plagiarism checks, marking, or grade calculation as an official record. Not an official student record system |
+| University timetable generation | Not responsible for generating the university timetable, managing classes, or enforcing attendance |
+| Mental health and wellbeing intervention | Not responsible for clinical wellbeing monitoring, diagnosis, or crisis support |
+| Device and OS notification delivery | The system can request notifications, but OS and platform delivery failures are outside the system's responsibility |
+| Third-party service availability | If an external calendar service or LMS changes their API or becomes unavailable, that is outside the system boundary |
 
 
 
 ## Actors and External Systems
 
 ### Primary Actor
-- **Student** — creates tasks, logs study sessions, views progress, and receives reminders
+- **Student** — creates tasks, logs study sessions, views progress, and receives reminders.
 
 ### Optional Supporting Actors
-- **Tutor / Mentor / Study Buddy** — may view shared progress in future iterations 
+- **Tutor / Mentor / Study Buddy** — may view shared progress in future iterations.
 
 ### External Systems Interacting with the Boundary
 
