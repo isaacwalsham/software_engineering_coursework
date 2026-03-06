@@ -1,96 +1,80 @@
-Defining Our System Scope and Boundaries 
+# 3.1 System Context and Boundaries
 
-System definition
-System: A Study Planner that helps students import assessment deadlines, break coursework into manageable tasks, schedule/track study sessions, visualise progress/dependencies, and receive reminders.
+## System Definition
 
-System boundary: Everything the app stores, calculates, displays and notifies about study planning and progress is inside. Anything to do with teaching, grading, official timetabling, or institutional data ownership/accuracy is outside.
+The Study Planner is a web-based academic planning application that helps students import assessment deadlines, decompose coursework into manageable tasks, log and track study sessions, visualise progress and task dependencies, and receive reminders for upcoming and overdue work.
 
-IN SCOPE (System)
+**System boundary:** Everything the application stores, calculates, displays, and notifies about study planning and progress is inside the boundary. Anything related to teaching, grading, official timetabling, or institutional data ownership and accuracy is outside the boundary.
 
-Components, features, and functionalities that are part of the system being developed:
-School data import & organisation 
+---
 
-Import module/assessment info and deadlines from a school source.
-Automatically organise imported items into semester/module structures like sections and timelines.
+## In Scope
 
-Coursework breakdown into milestones
+The following components, features, and functionalities are part of the system being developed.
 
-Let users deconstruct coursework into smaller tasks/subtasks.
-Support task dependencies (e.g., “research” before “write draft”).
+### School Data Import and Organisation
+- Import module and assessment information and deadlines from a structured data file provided by the UEA Hub
+- Automatically organise imported data into semester and module structures, reflecting the academic semester timeline
+- Validate file format and structure before persisting any data
 
-Study session logging tied to tasks
+### Coursework Breakdown into Tasks and Milestones
+- Allow students to decompose coursework assessments into smaller, more manageable study tasks
+- Support task dependencies (e.g. a "Write Draft" task cannot begin until "Research" is complete)
+- Allow students to define intermediate milestones with their own deadlines, linked to one or more tasks
 
-Users can log study sessions and label/link them to specific tasks.
-Use this linkage to support progress tracking toward completion.
+### Study Session Logging Tied to Tasks
+- Allow students to log study activities and link them to one or more specific tasks
+- Capture activity type, duration, quantity completed, date, and optional notes
+- Use logged activity data to calculate and update progress towards task completion
 
-Progress + dependency visualisation
+### Progress and Dependency Visualisation
+- Provide a Gantt chart timeline showing task bars across the semester, with start dates and deadlines
+- Display progress fills within task bars indicating percentage completion
+- Render dependency arrows between tasks to show which tasks are locked until prerequisites are complete
+- Display milestone markers as diamond shapes at their respective deadline positions
 
-Provide visual representations (e.g., Gantt-style timeline) showing:
-task timing across semester, completion indicators (e.g., % progress bars),dependency relationships.
+### Module-Level Progress Dashboard
+- Aggregate task progress across all modules and assessments
+- Classify each deadline as completed, upcoming, or missed based on progress and current date
+- Display a progress bar for each deadline so students can identify where attention is needed
 
-Module-level progress dashboard
+### Deadline and Overdue Reminders
+- Compare task and assessment deadlines against the current system date
+- Highlight tasks approaching their deadline in amber and overdue tasks in red
+- Surface these alerts on the dashboard so students have immediate visibility of at-risk work
 
-Aggregate task progress per module and across modules.
-Surface where attention is needed (e.g., “Module A behind schedule”).
+---
 
-Deadline and overdue reminders
+## Out of Scope
 
-Send notifications for:
-tasks due in X days and overdue tasks requiring attention.
+The following are explicitly outside the system's responsibility.
 
+| Area | Reason |
+|---|---|
+| Official institutional data correctness | The system is not responsible for guaranteeing that school-provided data is accurate or complete. Discrepancies with school records must be resolved externally. |
+| Teaching and learning content delivery | No tutoring, revision notes, lecture content, solutions, or marking feedback. |
+| Grading, submissions, and academic administration | Not responsible for submitting coursework, interfacing with plagiarism checks, marking, or grade calculation as an official record. Not an official student record system. |
+| University timetable generation | Not responsible for generating the university timetable, managing classes, or enforcing attendance. |
+| Mental health and wellbeing intervention | Not responsible for clinical wellbeing monitoring, diagnosis, or crisis support. |
+| Device and OS notification delivery | The system can request notifications, but OS and platform delivery failures are outside the system's responsibility. |
+| Third-party service availability | If an external calendar service or LMS changes their API or becomes unavailable, that is outside the system boundary. |
 
-OUT OF SCOPE (Environment)
+---
 
-These are explicitly not the system’s responsibility:
-Official institutional data correctness
+## Actors and External Systems
 
-The system is not responsible for guaranteeing school-provided data is correct/complete.
-Resolving discrepancies with school records is outside scope.
+### Primary Actor
+- **Student** — creates tasks, logs study sessions, views progress, and receives reminders
 
-Teaching/learning content delivery
+### Optional Supporting Actors
+- **Tutor / Mentor / Study Buddy** — may view shared progress in future iterations (out of scope for v1)
 
-No tutoring, revision notes, lecture content, solutions, or marking/feedback.
+### External Systems Interacting with the Boundary
 
-Grading, submissions, and academic administration
-
-Not responsible for submitting coursework, interfacing with plagiarism checks, marking, or grade calculation as an official record.
-Not an official student record system.
-
-Creating a full timetable / attendance enforcement
-
-Not responsible for generating the university timetable, managing classes, or enforcing attendance.
-
-Mental health / wellbeing intervention
-
-Not responsible for clinical wellbeing monitoring, diagnosis, or crisis support it can be a “signpost” later, but not accountable.
-
-Device/OS notification delivery guarantees
-
-The app can request notifications, but OS/platform delivery failures are outside the system’s responsibility.
-
-Third-party service availability
-
-If an external calendar/LMS is down or changes their API, that’s outside your system boundary.
-
-- 
-Actors & External Systems
-Key users and external systems that interact with the system:
-
-External actors (outside, but interacting with the system):
-
-Primary user: Student - creates tasks, logs sessions, views progress, receives reminders.
-
-Optional supporting actors: Tutor / mentor / study buddy.
-
-Institution staff/systems: University/school admin systems that provide module/deadline data.
-
-External systems / services (outside the boundary):
-
-School systems / LMS (e.g.Blackboard) — source of deadlines and module info.
-
-Institution data sources (module catalogue, assessment calendars).
-
-Notification platform (iOS/Android/Web push notification services).
-
-Calendar services (Google/Apple/Microsoft calendars) if you plan optional sync.
-Authentication provider (e.g., SSO) if used.
+| External System | Role |
+|---|---|
+| UEA Hub / School LMS (e.g. Blackboard) | Source of module, assessment, and deadline data — provided as a structured file |
+| Institution data sources | Module catalogue and assessment calendars that generate the hub data file |
+| Notification platform | iOS / Android / Web push notification services used to deliver reminders |
+| Calendar services | Google / Apple / Microsoft calendars — optional sync considered for future iterations |
+| Authentication provider | SSO or institutional login provider if used for student authentication |
