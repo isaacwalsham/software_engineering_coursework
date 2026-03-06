@@ -10,7 +10,6 @@ We selected three user stories as the core of the system for Sprint 1:
 | **US-02** – Log Progress | Log time or tasks completed against a specific module | This is the primary action students use to track their work |
 | **US-05** – Dashboard | Display module status and percentage completion | This is the essential feedback loop that makes the system useful |
 
-### Minimum Viable Scope Per Story
 
 **US-01 – Import Data**
 - Must work: read UEA data file correctly; save deadlines without losing any dates
@@ -28,7 +27,7 @@ We selected three user stories as the core of the system for Sprint 1:
 
 ## Issues Identified During Review
 
-After reviewing our diagrams and wireframes, the following inconsistencies and gaps were found. These need to be resolved to ensure our interaction artefacts stay consistent across user stories, UX design, architecture, and interaction models, and to avoid design drift as artefacts evolve.
+After reviewing our diagrams and wireframes, the following inconsistencies and gaps were found. These need to be resolved to ensure our interaction artefacts stay consistent across user stories, UX design, architecture, and interaction models.
 
 ---
 
@@ -36,7 +35,7 @@ After reviewing our diagrams and wireframes, the following inconsistencies and g
 
 We selected US-01, US-02, and US-05 as our three core stories, but one of the current sequence diagrams models **US-03** instead. This creates a direct mismatch between our prioritised requirements and our interaction modelling.
 
-Each sequence diagram should be linked to one of the core user stories. We should have interaction models for two to three core behaviours — currently we do not.
+Each sequence diagram should be linked to one of the core user stories. We should have interaction models for two to three core behaviours and currently we do not.
 
 ---
 
@@ -54,13 +53,12 @@ Our dashboard-related materials include ideas such as a Gantt or workload view. 
 - Show module name
 - Show module status: On Track or Behind Schedule
 
-The more advanced Gantt-style behaviour is closer to a future enhancement than our minimum viable Sprint 1 version. This scope drift needs to be corrected before implementation begins.
 
 ---
 
 ### Issue 4 – Dashboard Wireframe Does Not Show Status Labels
 
-The current dashboard wireframe shows module bars and dates, but does not clearly show a textual status such as **On Track** or **Behind Schedule**. This is part of the must-work definition of US-05 and must be visible in the wireframe before the sprint begins.
+The current dashboard wireframe shows module bars and dates, but does not clearly show a status such as **On Track** or **Behind Schedule**. This is part of the must-work definition of US-05 and must be visible in the wireframe before the sprint begins.
 
 ---
 
@@ -72,7 +70,7 @@ In the import happy path, the system appears to create and save an empty timetab
 - partial data is stored
 - the entire import is rolled back
 
-This must be clarified so that the design matches the US-01 requirement that deadlines are saved without losing any dates. Our preferred approach is an atomic import: nothing is saved unless the entire file is processed successfully.
+This must be clarified so that the design matches the US-01 requirement that deadlines are saved without losing any dates. Our preferred approach is that nothing should be saved unless the entire file is processed successfully.
 
 ---
 
@@ -84,26 +82,26 @@ We have an unhappy path for login and for import, but UI coverage is uneven:
 - The login error is shown in a sequence diagram but not clearly in the wireframes
 - Progress logging validation errors (US-02) are not yet shown anywhere
 
-Error, loading, and success states should be visible in the UI design for all three core stories, not just import.
+Error, loading, and success states should be visible in the UI design for all three core stories, not just for the import.
 
 ---
 
 ### Issue 7 – Sequence Diagrams Do Not Fully Respect Architecture Boundaries
 
-In our current diagrams, the "Study Planner System" performs several internal actions but persistence is hidden inside a single lifeline. While this is acceptable at a high level, our final sequence diagrams should reflect the layered boundaries defined in our architecture — for example: UI → Backend → Service → Database — rather than treating the system as a single black box.
+In our current diagrams, the Study Planner System performs several internal actions but persistence is hidden inside a single lifeline. While this is acceptable at a high level, our final sequence diagrams should reflect the layered boundaries defined in our architecture — for example: UI → Backend → Service → Database.
 
 ---
 
 ## New Assumptions Discovered During Iteration
 
-The following assumptions were previously implicit and are now formally documented:
+The following assumptions are now formally documented:
 
 | # | Assumption |
 |---|---|
-| 1 | **Authentication is required before core actions.** The user must be logged in before importing data, logging progress, or viewing the dashboard. |
+| 1 | **Authentication is required before core actions.** The user must be logged in before importing data, logging progress, or looking at the dashboard. |
 | 2 | **The first supported upload format will be CSV only.** This keeps US-01 small enough for an initial sprint. |
 | 3 | **The imported file contains sufficient data to create module records and deadlines.** We assume fields include module code, assessment name, and deadline date. |
-| 4 | **Each module can have multiple progress logs.** US-02 requires repeated updates over time, not a single completion value. |
+| 4 | **Each module can have multiple progress logs.** US-02 requires repeated updates over time. |
 | 5 | **Dashboard progress is calculated from logged study data.** US-05 depends directly on data created through US-02. |
 | 6 | **A simple status rule will be used first.** The system will compare logged progress against expected progress based on deadline proximity, then label a module as On Track or Behind Schedule. |
 | 7 | **User-facing errors will be simple; technical detail is logged internally.** For example, users see "Import failed, please try again" rather than a raw exception trace. |
@@ -118,15 +116,15 @@ Based on the review above, the following changes will be made before Sprint 1 im
 
 **Change 1 – Replace the US-03 sequence with a US-02 sequence**
 
-Remove or postpone the US-03 workload/Gantt sequence diagram and replace it with a proper US-02 Log Progress sequence showing the full interaction flow including validation.
+Remove or postpone the US-03 workload/sequence diagram and replace it with a proper US-02 Log Progress sequence showing the full interaction flow including validation.
 
-*Reason: US-02 is one of the three agreed core stories. US-03 is not.*
+*Reason: US-02 is one of the three agreed core stories and US-03 is not.*
 
 ---
 
 **Change 2 – Simplify the dashboard to match minimum viable scope**
 
-The Sprint 1 dashboard will focus on three outputs only: module name, percentage complete, and current status (On Track / Behind Schedule). Advanced workload and Gantt-style behaviour will be deferred to Sprint 2.
+The Sprint 1 dashboard will focus on three outputs only: module name, percentage complete, and current status (On Track / Behind Schedule).
 
 *Reason: this matches the agreed must-work scope for US-05.*
 
@@ -142,7 +140,7 @@ The dashboard screen must be updated to show explicit status labels such as On T
 
 **Change 4 – Add progress logging interaction and validation state to US-02 wireframe**
 
-The US-02 wireframe should show the form for entering either time spent or tasks completed, and must also show what happens when the user submits incomplete or invalid data (the validation failure state).
+The US-02 wireframe should show the form for entering either time spent or tasks completed, and must also show what happens when the user submits incomplete or invalid data.
 
 *Reason: the current design shows the form but not the failure or validation behaviour.*
 
@@ -152,18 +150,17 @@ The US-02 wireframe should show the form for entering either time spent or tasks
 
 We need to formally define what happens on an unsuccessful import. The three options are:
 
-- Save nothing (full rollback)
-- Save only valid rows (partial save)
+- Save nothing 
+- Save only valid rows 
 - Save an empty timetable shell
 
-Our preferred option is a **full rollback**: no deadline data is saved unless the import completes successfully. This reduces data inconsistency and directly supports the US-01 requirement not to lose dates.
+Our preferred option is that no deadline data is saved unless the import completes successfully. This reduces data inconsistency and directly supports the US-01 requirement not to lose dates.
 
 ---
 
 ## Sprint 1 Backlog
 
-The following tasks make up the Sprint 1 backlog, derived from the three core user stories. All items are scoped to the minimum viable functionality agreed above.
-
+The following tasks make up the Sprint 1 backlog, derived from the three core user stories.
 | Backlog Item | Linked Story | Reason for Priority |
 |---|---|---|
 | Implement login / authentication flow | Supports all core stories | Needed before users can access main features |
@@ -182,7 +179,7 @@ The following tasks make up the Sprint 1 backlog, derived from the three core us
 
 ## Sprint Backlog Management
 
-We will use **GitHub Projects** to manage the sprint backlog. This keeps tasks close to the codebase and matches the module guidance that sprint documentation should be archived close to the code.
+We will use **GitHub Projects** to manage the sprint backlog.
 
 Our board will use the following columns:
 
