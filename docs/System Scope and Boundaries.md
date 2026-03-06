@@ -51,7 +51,7 @@ The following are explicitly outside the system's responsibility.
 
 | Area | Reason |
 |---|---|
-| Official institutional data correctness | The system is not responsible for guaranteeing that school-provided data is accurate or complete. Issues with school records must be resolved externally. |
+|  Data correctness | The system is not responsible for guaranteeing that school-provided data is accurate or complete. Issues with school records must be resolved externally. |
 | Teaching and learning content delivery | No tutoring, revision notes, lecture content, solutions, or marking feedback. |
 | Grading, submissions, and academic administration | Not responsible for submitting coursework, interfacing with plagiarism checks, marking, or grade calculation as an official record. Not an official student record system. |
 | University timetable generation | Not responsible for generating the university timetable, managing classes, or enforcing attendance. |
