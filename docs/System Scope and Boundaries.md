@@ -1,4 +1,4 @@
-# 3.1 System Context and Boundaries
+# 3.1 System Scope and Boundaries
 
 ## System Definition
 
